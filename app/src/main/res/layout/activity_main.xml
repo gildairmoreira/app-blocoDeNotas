@@ -7,13 +7,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/editAnotacao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:hint="Digite aqui sua anotação"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:background="@color/white"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:gravity="start"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:clickable="true"
+        android:contentDescription="SAVE"
+        app:layout_constraintBottom_toBottomOf="@id/editAnotacao"
+        app:layout_constraintEnd_toEndOf="@id/editAnotacao"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="@id/editAnotacao"
+        app:layout_constraintTop_toTopOf="@id/editAnotacao"
+        app:layout_constraintVertical_bias="0.964"
+        app:srcCompat="@drawable/ic_salvar"
+        tools:ignore="VectorDrawableCompact"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
